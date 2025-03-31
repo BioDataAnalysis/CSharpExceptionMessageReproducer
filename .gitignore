@@ -1,0 +1,12 @@
+*~
+*.swp
+*.swo
+.DS_Store
+.idea/
+.vs
+**/*.vcxproj.user
+csharp_test/bin
+csharp_test/obj
+native_interface/CSharpExceptionMessageReproducer.NativeInterface.dir
+native_interface/x64
+x64
