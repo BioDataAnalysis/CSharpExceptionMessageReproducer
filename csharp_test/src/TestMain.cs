@@ -9,13 +9,20 @@ class TestMain
 
         try
         {
-
-            vExceptionMessageReproducer.test();
-
+            vExceptionMessageReproducer.testCLRException();
         }
         catch (System.Exception vEx)
         {
-            Console.WriteLine("TestMain::Main(): Caught 'System.Exception' with message '" + vEx.Message + "'");
+            Console.WriteLine("TestMain::Main(): From testCLRException(), caught 'System.Exception' with message '" + vEx.Message + "'");
+        }
+
+        try
+        {
+            vExceptionMessageReproducer.testNonCLRException();
+        }
+        catch (System.Exception vEx)
+        {
+            Console.WriteLine("TestMain::Main(): From testNonCLRException(), caught 'System.Exception' with message '" + vEx.Message + "'");
         }
 
         return 0;

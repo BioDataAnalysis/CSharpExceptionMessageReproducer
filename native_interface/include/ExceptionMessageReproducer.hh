@@ -13,7 +13,8 @@ public:
     ExceptionMessageReproducer();
     ~ExceptionMessageReproducer();
 
-    void test();
+    void testCLRException();
+    void testNonCLRException();
 
 protected:
     !ExceptionMessageReproducer();

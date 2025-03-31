@@ -38,12 +38,15 @@
     <ExceptionHandling>Async</ExceptionHandling>
     <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
     <LanguageStandard>stdcpp20</LanguageStandard>
-    <MinimalRebuild></MinimalRebuild>
+    <MinimalRebuild>
+    </MinimalRebuild>
     <Optimization>Disabled</Optimization>
     <PrecompiledHeader>NotUsing</PrecompiledHeader>
     <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
-    <SupportJustMyCode></SupportJustMyCode>
-    <SuppressStartupBanner></SuppressStartupBanner>
+    <SupportJustMyCode>
+    </SupportJustMyCode>
+    <SuppressStartupBanner>
+    </SuppressStartupBanner>
     <UseFullPaths>false</UseFullPaths>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
@@ -74,12 +77,15 @@
       <ExceptionHandling>Async</ExceptionHandling>
       <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
       <LanguageStandard>stdcpp20</LanguageStandard>
-      <MinimalRebuild></MinimalRebuild>
+      <MinimalRebuild>
+      </MinimalRebuild>
       <Optimization>Disabled</Optimization>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
-      <SupportJustMyCode></SupportJustMyCode>
-      <SuppressStartupBanner></SuppressStartupBanner>
+      <SupportJustMyCode>
+      </SupportJustMyCode>
+      <SuppressStartupBanner>
+      </SuppressStartupBanner>
       <UseFullPaths>false</UseFullPaths>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);_ITERATOR_DEBUG_LEVEL=0;WINVER=0x0A00;_WIN32_WINNT=0x0A00;DEBUG;_CRT_SECURE_NO_DEPRECATE;_SILENCE_ALL_CXX17_DEPRECATION_WARNINGS;WIN32;_WINDOWS;CMAKE_INTDIR="Debug";CSharpExceptionMessageReproducer_NativeInterface_EXPORTS</PreprocessorDefinitions>
       <ObjectFileName>$(IntDir)</ObjectFileName>
@@ -111,7 +117,11 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="include\ExceptionMessageReproducer.hh" />
+    <ClCompile Include="src\NonCLRExceptionGenerator.cc">
+      <CompileAsManaged Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</CompileAsManaged>
+    </ClCompile>
     <ClCompile Include="src\ExceptionMessageReproducer.cc" />
+    <ClInclude Include="include\NonCLRExceptionGenerator.hh" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
